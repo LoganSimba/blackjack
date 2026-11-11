@@ -8,9 +8,9 @@ public class Player {
     private ArrayList<Card> cards;
 
 
-    public Player(String name, Hand hand, ArrayList<Card> cards) {
+    public Player(String name) {
         this.name = name;
-        this.hand = hand;
+        this.hand = new Hand();
         this.cards = cards;
     }
 
@@ -25,4 +25,6 @@ public class Player {
     public Hand getHand() {
         return hand;
     }
+
+
 }
