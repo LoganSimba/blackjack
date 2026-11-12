@@ -34,15 +34,16 @@ public class BlackJack {
             int total = player.getHand().getValue();
             System.out.println(player.getName() + ": " + total);
 
+            //if a players total is less than 21 and greater than the others player, return the player
             if(total <= 21 && total > biggerTotal){
                 total = biggerTotal;
                 winner = player;
             }
         }
-        //if there is no winner, all players went above 21
+        //if all players are above 21
         if (winner == null) {
             System.out.println("No winner, everyone went over 21.");
-        } else {
+        } else {//display who won the game
             System.out.println(winner.getName() + " wins with " + biggerTotal);
         }
 
